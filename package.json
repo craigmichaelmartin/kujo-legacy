@@ -1,0 +1,14 @@
+{
+  "name": "kujo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
