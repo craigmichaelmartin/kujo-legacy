@@ -10,9 +10,39 @@ a:hover {
     text-shadow: 0px 0px 0px #0D0D0E;
     color: #0d0d0e !important;
 }
+.Footer-bottom a {
+    color: #727272 !important;
+}
 .dropdown-menu a:first-child {
     padding-top: 10px;
 }
+
+.mdl-textfield__label:after {
+    bottom: 15px;
+    background-color: #75bf43;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #75bf43;
+}
+.mdl-textfield__label {
+    text-align: center;
+}
+.mdl-textfield__input {
+    font-family: inherit;
+    text-align: center;
+}
+.mdl-textfield {
+    width: 100%;
+}
+.mdl-textfield--floating-label .mdl-textfield__label,
+.mdl-textfield__label:after {
+    transition-duration: .5s;
+}
+.mdl-textfield__label:after {
+    left: 50%;
+}
+
+
 .Navbar {
     padding-top: 15px;
     width: 100%;
@@ -69,4 +99,77 @@ a:hover {
     .Navbar--mobile .Navbar-brand-image {
         height: 24px;
     }
+}
+
+
+
+
+
+.Footer {
+    width: 100%;
+    font-size: 14.5px;
+    background: url('../images/verylightgrayk.png');
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+}
+.Footer-header {
+   font-size: 22px;
+   text-align: center;
+}
+.Footer-header-logo {
+    height: 18px;
+    vertical-align: baseline;
+}
+.Footer-standard {
+    padding-top: 50px;
+}
+.Footer-logo {
+    display: block;
+    height: 300px;
+    opacity: .012;
+    background: url('../images/grayk.png');
+}
+.Footer-image {
+    width: 100%;
+}
+.Footer-message {
+    padding-top: 15px;
+    display: block;
+    text-align: justify;
+}
+.Footer-email {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 16px;
+}
+.Footer-email-copy {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.Footer-signup {
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 11px;
+    padding-top: 10px;
+}
+.Footer-social {
+    padding-top: 40px;
+    text-align: center;
+}
+.Footer-social-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: .9;
+    cursor: pointer;
+}
+.Footer-social-item:hover {
+    opacity: 1;
+}
+.Footer-bottom {
+    color: #727272;
+    text-align: center;
+    font-size: 14.5px;
+    clear: both;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
