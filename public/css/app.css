@@ -30,14 +30,19 @@ a:hover {
     background-color: #75bf43;
 }
 .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: #75bf43;
+    color: #75bf43 !important;
+    font-weight: 400;
 }
 .mdl-textfield__label {
     text-align: center;
+    font-weight: 100;
+    color: #888;
+    letter-spacing: 1px;
 }
 .mdl-textfield__input {
     font-family: inherit;
     text-align: center;
+    border-color: #999;
 }
 .mdl-textfield {
     width: 100%;
@@ -64,6 +69,9 @@ a:hover {
     background: transparent;
     padding-bottom: 5px;
     padding-top: 9px;
+}
+.btn-default {
+    border-color: #888 !important;
 }
 
 
@@ -189,7 +197,7 @@ a:hover {
     background: transparent;
     color: white !important;
     text-shadow: .1em .1em 1em rgba(0,0,0,0.8);
-    border-color: white;
+    border-color: white !important;
 }
 .Slides-action:hover {
     border-color: white !important;
@@ -226,32 +234,56 @@ a:hover {
     letter-spacing: 2px;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
 }
-.Product-item--footwear {
-    background-image: url('../images/shoesedited.jpg');
+.Product-image img {
+    height: 400px;
 }
-.Product-item--socks {
-    background-image: url('../images/sockedited.jpg');
+.Product-copy button {
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-align: center;
+    min-width: 50%;
+    padding-top: 10px;
+    background: transparent;
+    color: #333 !important;
+    /*text-shadow: .1em .1em 1em rgba(0,0,0,0.8);*/
+    /*border-color: #333 !important;*/
 }
-.Product-item--apparel {
-    background-image: url('../images/shirtedited.jpg');
+@media (max-width: 991px) {
+    .Product-image img {
+        height: 300px;
+    }
+    .Product-item {
+        height: 300px;
+    }
 }
-.Product-item--gear {
-    background-image: url('../images/glovesedited.jpg');
+@media (max-width: 759px) {
+    .Product-copy {
+        font-size: 16px;
+        text-align: justify;
+    }
+    .Product-image img {
+        height: 100px;
+    }
+    .Product-item {
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    .Product-message {
+        direction: ltr;
+    }
+    .Product-item--right {
+        direction: rtl;
+    }
+    .Product-copy button {
+        margin-top: 10px;
+        width: 100%;
+    }
 }
-.Product-item--left {
-    background-position: right;
-}
-.Product-item--right {
-    background-position: left;
-}
-.Product-copy {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
+
 
 
 
@@ -325,12 +357,13 @@ a:hover {
     width: 100%;
     font-size: 16px;
     background: url('../images/verylightgrayk.png');
-    background-size: 40% 100%;
     background-repeat: no-repeat;
+    background-size: inherit;
 }
 .Footer-header {
    font-size: 22px;
    text-align: center;
+   letter-spacing: 2.5px;
 }
 .Footer-header-logo {
     height: 18px;
@@ -362,12 +395,14 @@ a:hover {
 .Footer-email-copy {
     font-size: 22px;
     padding-bottom: 10px;
+    letter-spacing: 2.5px;
 }
 .Footer-signup {
     text-transform: uppercase;
     width: 100%;
     margin-top: 11px;
     padding-top: 10px;
+    letter-spacing: 2.5px;
 }
 .Footer-social {
     padding-top: 40px;
