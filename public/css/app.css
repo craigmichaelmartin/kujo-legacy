@@ -495,3 +495,73 @@ a:hover {
     padding-top: 30px;
     padding-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.DeepDive {
+    width: 100%;
+}
+.DeepDive-pageHeader {
+    text-align: center;
+    background-color: #FCFCFC;
+}
+.DeepDive-pageHeaderText {
+    font-size: 68px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.DeepDive-pageHeaderSnippet {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #7E7E7E;
+}
+.DeepDive-pageHeaderImage {
+    padding-bottom: 50px;
+}
+.DeepDive .hr {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #3C6BE4;
+    padding: 0; 
+}
+.DeepDive-item {
+    text-align: center;
+}
+.DeepDive-itemHeader {
+    font-size: 58px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.DeepDive-itemSnippet {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #7E7E7E;
+    line-height: 1.2;
+}
