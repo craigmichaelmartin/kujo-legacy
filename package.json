@@ -7,6 +7,7 @@
     "css:build": "run-s css:transpile css:autoprefixor css:minify",
     "css:minify": "cssmin public/css/app.css > public/css/app.min.css",
     "css:transpile": "node-sass public/sass/main.scss public/css/app.css",
+    "css:lint": "sass-lint -v -q -c public/sass/.sass-lint.yml public/sass/components/*.scss",
     "css:watch": "watch \"npm run css:build\" public/sass/",
     "dirs:create": "mkdirp public/css public/compiledES2015",
     "dirs:clean": "rimraf public/css public/compiledES2015",
@@ -15,7 +16,8 @@
     "js:test": "echo \"Tests no implemented yet.\"",
     "js:build": "browserify javascript/main.js -dv | uglifyjs > compiledES2015/bundle.js",
     "js:watch": "watchify javascript/main.js -o compiledES2015/bundle.js -dv",
-    "postinstall": "npm run dirs:fresh",
+    "postinstall": "run-s setup",
+    "setup": "run-s css:build js:build",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -32,6 +34,7 @@
     "material-design-lite": "^1.1.3",
     "morgan": "~1.6.1",
     "mustache-express": "^1.2.2",
+    "sass-lint": "^1.7.0",
     "serve-favicon": "~2.3.0",
     "slick-carousel": "^1.6.0"
   },

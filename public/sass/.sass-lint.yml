@@ -36,7 +36,7 @@ rules:
   force-pseudo-nesting: 2
 
   # Name Formats
-  class-name-format: 1                  # Someday enforce (use BEM-style methodology)
+  class-name-format: 0                  # Someday enforce (use BEM-style methodology)
   function-name-format: 1               # Someday enforce (helps readability)
   id-name-format: 0
   mixin-name-format: 1                  # Someday enforce (helps readability)
@@ -51,7 +51,9 @@ rules:
   empty-args: 0
   hex-length: 2
   hex-notation: 0
-  indentation: 2
+  indentation:
+    - 2
+    - size: 4
   leading-zero: 0
   nesting-depth: 0
   property-sort-order: 0
