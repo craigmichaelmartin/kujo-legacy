@@ -1,0 +1,24 @@
+.Culture {
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #F8FBF5;
+    background-image: url('../images/clean-textile.png');
+    position: relative;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+.Culture .text {
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    font-size: 22px;
+    color: #333;
+    text-align: center; 
+    z-index:999;
+    line-height: 1.2;
+}
+.Culture .icon {
+    margin-top:20px;
+}

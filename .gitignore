@@ -1,6 +1,8 @@
 .DS_Store
 *.swp
 node_modules/*
+public/css/*
+public/compiledES2015/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml

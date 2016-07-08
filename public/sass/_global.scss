@@ -1,0 +1,85 @@
+/* Text shadow for black text on colors:
+ * text-shadow: 0 1px 3px #fff;
+ * White on colors:
+ * text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+ *
+ * Uppercase, 2.5px letterspacing for links
+ * Blue #3C6BE4
+ * Green #75bf43
+ */
+body, html {
+    font-family: 'Catamaran', "Helvetica Neue", sans-serif !important;
+    background: url('../images/sepia.jpg') no-repeat center center fixed; 
+}
+a {
+    color: rgb(65, 75, 86) !important;
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #0D0D0E;
+    color: #0d0d0e !important;
+}
+.u-noMar {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.Footer-bottom a {
+    color: #727272 !important;
+    font-weight: normal;
+}
+.dropdown-menu a:first-child {
+    padding-top: 10px;
+}
+
+.mdl-textfield__label:after {
+    bottom: 15px;
+    background-color: #3C6BE4;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #3C6BE4 !important;
+    font-weight: 400;
+}
+.mdl-textfield__label {
+    text-align: center;
+    font-weight: 100;
+    color: #888;
+    letter-spacing: 1px;
+}
+.mdl-textfield__input {
+    font-family: inherit;
+    text-align: center;
+    border-color: #999;
+}
+.mdl-textfield {
+    width: 100%;
+}
+.mdl-textfield--floating-label .mdl-textfield__label,
+.mdl-textfield__label:after {
+    transition-duration: .5s;
+}
+.mdl-textfield__label:after {
+    left: 50%;
+}
+.slick-dots {
+    bottom: 25px;
+}
+.slick-dots li button:before {
+    font-size: 14px;
+    color: white;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.btn:hover {
+    border-width: 2px;
+    background: transparent;
+    padding-bottom: 5px;
+    padding-top: 9px;
+}
+.btn-default {
+    border-color: #888 !important;
+}

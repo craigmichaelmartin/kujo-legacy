@@ -1,0 +1,74 @@
+.Footer {
+    padding-top: 60px;
+    width: 100%;
+    font-size: 16px;
+    background: url('../images/verylightgrayK.png');
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-color:white;
+}
+.Footer-header {
+   font-size: 22px;
+   text-align: center;
+   letter-spacing: 2.5px;
+}
+.Footer-header-logo {
+    height: 18px;
+    vertical-align: baseline;
+}
+.Footer-standard {
+    padding-top: 50px;
+}
+.Footer-logo {
+    display: block;
+    height: 300px;
+    opacity: .012;
+    background: url('../images/grayk.png');
+}
+.Footer-image {
+    width: 100%;
+}
+.Footer-text {
+    padding-top: 15px;
+    display: block;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+.Footer-email {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 16px;
+}
+.Footer-email-copy {
+    font-size: 22px;
+    padding-bottom: 10px;
+    letter-spacing: 2.5px;
+}
+.Footer-signup {
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 11px;
+    padding-top: 10px;
+    letter-spacing: 2.5px;
+}
+.Footer-social {
+    padding-top: 40px;
+    text-align: center;
+}
+.Footer-social-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: .9;
+    cursor: pointer;
+}
+.Footer-social-item:hover {
+    opacity: 1;
+}
+.Footer-bottom {
+    color: #727272;
+    text-align: center;
+    font-size: 14.5px;
+    clear: both;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}

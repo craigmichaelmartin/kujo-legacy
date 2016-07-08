@@ -1,0 +1,122 @@
+.BlogPreview {
+    width: 100%;
+    padding-top: 60px;
+    min-height: 1400px;
+    background-image: url('../images/backgroundsky.jpg');
+    background-image: url('../images/grassforblog.jpg');
+    background-image: url('../images/refresh.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.BlogPreview-header {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 38px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: 200;
+    line-height: 1.2;
+}
+.BlogPreview-item {
+    height: 250px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BlogPreview-item {
+    position: relative;
+    cursor: pointer;
+    z-index: 9;
+}
+.BlogPreview-item:after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all .3s ease-out;
+}
+.BlogPreview-item--first:after {
+    background-image: url('../images/aboutus.jpeg');
+}
+.BlogPreview-item--second:after {
+    background-image: url('../images/apparel.jpeg'); 
+}
+.BlogPreview-item--third:after {
+    background-image: url('../images/footwear.jpeg');
+}
+.BlogPreview-item--fourth:after {
+    background-image: url('../images/howgive.jpeg');
+}
+.BlogPreview-item:hover:after {
+    opacity : 0.9;
+    transition: none;
+}
+.BlogPreview-copy {
+    /*display: table-cell;*/
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: white;
+    font-size: 20px;
+}
+.BlogPreview-email {
+    padding-top:700px;
+    padding-bottom:100px;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2.5px;
+    color: white;
+    font-size: 20px;
+}
+.BlogPreview-signup {
+    margin-top: 11px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    background: transparent;
+    color: white !important;
+    text-shadow: .1em .1em 1em rgba(0,0,0,0.8);
+    border-color: white !important;
+}
+.BlogPreview-signup:hover {
+    border-color: white !important;
+}
+.BlogPreview .mdl-textfield__input{
+    border-color: white !important;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.BlogPreview .mdl-textfield__label {
+    color: white !important;
+}
+.BlogPreview .mdl-textfield__label:after {
+    bottom: 15px;
+    background-color: #3C6BE4;
+}
+.BlogPreview .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #3C6BE4 !important;
+    font-weight: 400;
+}
+@media (max-width: 759px) {
+    .BlogPreview-email {
+        padding-top:400px;
+    }
+}

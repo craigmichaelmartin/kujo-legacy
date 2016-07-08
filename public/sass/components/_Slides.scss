@@ -1,0 +1,61 @@
+.Slides {
+    width: 100%;
+    height: 600px;
+}
+.Slides-item {
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.Slides-item--story {
+    background: url('../images/aboutus.jpeg');
+    background-size: cover;
+    height: 600px;
+}
+.Slides-item--footwear {
+    background: url('../images/footwear.jpeg');
+    background-size: cover;
+    height: 600px;
+}
+.Slides-item--apparel {
+    background: url('../images/apparel.jpeg');
+    background-size: cover;
+    height: 600px;
+}
+.Slides-item--give {
+    background: url('../images/howgive.jpeg');
+    background-size: cover;
+    height: 600px;
+}
+.Slides-copy {
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    color: white !important;
+    text-shadow: .1em .1em 1em rgba(0,0,0,0.8);
+    line-height: 1.3;
+    margin-top: 100px;
+}
+.Slides-text {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.Slides-action {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    text-align: center;
+    min-width: 25%;
+    padding-top: 10px;
+    background: transparent;
+    color: white !important;
+    text-shadow: .1em .1em 1em rgba(0,0,0,0.8);
+    border-color: white !important;
+}
+.Slides-action:hover {
+    border-color: white !important;
+}
