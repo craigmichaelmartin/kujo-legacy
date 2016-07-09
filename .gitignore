@@ -1,6 +1,7 @@
 .DS_Store
 *.swp
 node_modules/*
+npm-debug.log
 public/css/*
 public/compiledES2015/*
 # Elastic Beanstalk Files

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "css:autoprefixer": "postcss --use autoprefixer public/css/app.css -o public/css/app.css",
-    "css:build": "run-s css:transpile css:autoprefixor css:minify",
+    "css:build": "run-s css:transpile css:autoprefixer css:minify",
     "css:minify": "cssmin public/css/app.css > public/css/app.min.css",
     "css:transpile": "node-sass public/sass/main.scss public/css/app.css",
     "css:lint": "sass-lint -v -q -c public/sass/.sass-lint.yml public/sass/components/*.scss",
@@ -14,11 +14,14 @@
     "dirs:fresh": "run-s dirs:clean dirs:create",
     "js:lint": "eslint .",
     "js:test": "echo \"Tests no implemented yet.\"",
-    "js:build": "browserify javascript/main.js -dv | uglifyjs > compiledES2015/bundle.js",
-    "js:watch": "watchify javascript/main.js -o compiledES2015/bundle.js -dv",
-    "postinstall": "run-s setup",
-    "setup": "run-s css:build js:build",
-    "start": "node ./bin/www"
+    "js:build": "browserify public/javascript/main.js -dv | uglifyjs > public/compiledES2015/bundle.js",
+    "js:watch": "watchify public/javascript/main.js -o public/compiledES2015/bundle.js -dv",
+    "lint": "run-s css:lint js:lint",
+    "postinstall": "run-s build",
+    "build": "run-p css:build js:build",
+    "start": "node ./bin/www",
+    "test": "run-s lint js:test",
+    "watch": "run-p css:watch js:watch"
   },
   "dependencies": {
     "babel-polyfill": "^6.9.1",
@@ -36,7 +39,8 @@
     "mustache-express": "^1.2.2",
     "sass-lint": "^1.7.0",
     "serve-favicon": "~2.3.0",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "autoprefixer": "~6.3.3",
@@ -72,12 +76,15 @@
     "karma-sinon-chai": "~1.0.0",
     "less": "~2.5.1",
     "less-plugin-clean-css": "",
+    "mkdirp": "^0.5.1",
     "mocha": "~2.3.0",
     "mockery": "^1.7.0",
     "node-inspector": "^0.12.8",
     "node-sass": "~3.4.2",
+    "npm-run-all": "^2.0.0",
     "phantomjs-prebuilt": "^2.1.5",
     "postcss-cli": "~2.5.1",
+    "rimraf": "^2.5.3",
     "sinon": "^1.17.3",
     "uglify-js": "v2.4.24",
     "watch": "~0.16.0",
