@@ -18,20 +18,18 @@ const FootwearDeepDive = BaseView.extend({
     },
 
     afterRender() {
-        setTimeout(function() {
-            this.$('.js-footwearSlides').slick({
-                infinite: true,
-                slidesToShow: 1,
-                arrows: false,
-                dots: false,
-                autoplay: true,
-                pauseOnHover: false,
-                speed: 1000,
-                fade: true,
-                cssEase: 'linear',
-                autoplaySpeed: 3000
-            });
-        }, 0);
+        this.$('.js-footwearSlides').slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            pauseOnHover: false,
+            speed: 1000,
+            fade: true,
+            cssEase: 'linear',
+            autoplaySpeed: 3000
+        });
     }
 
 });

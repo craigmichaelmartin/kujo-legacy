@@ -36,11 +36,11 @@ const AppView = View.extend({
     renderHeaderAndFooter() {
         this.header = new HeaderView({
             appState: this.appState,
-            el: $('.js-navbar')
+            el: '.js-navbar'
         });
         this.footer = new FooterView({
             appState: this.appState,
-            el: $('.js-footer')
+            el: '.js-footer'
         });
     },
 
@@ -66,7 +66,7 @@ const AppView = View.extend({
         this.$('.js-content').length || this.$('.js-navbar').after('<div class="js-content"></div>');
         const Constructor = map[this.appState.get('app')];
         this.app = new Constructor({
-            el: $('.js-content'),
+            el: '.js-content',
             appState: this.appState
         });
         this.app.render();

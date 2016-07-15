@@ -38,7 +38,7 @@ const NotFound = View.extend({
 
     afterRender() {
         this.sections = [
-            new NotFoundView({el: $('.js-notFoundView')}),
+            new NotFoundView({el: '.js-notFoundView'}),
         ];
     }
 

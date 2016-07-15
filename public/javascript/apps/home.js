@@ -42,11 +42,11 @@ const HomePage = View.extend({
 
     afterRender() {
         this.sections = [
-            new NavigationSlidesView({el: $('.js-navigationSlides')}),
-            new CultureView({el: $('.js-culture')}),
-            new SectionHeaderView({el: $('.js-sectionHeaderPremiumYardwear')}),
-            new ProductPreviewView({el: $('.js-productPreview')}),
-            new BlogPreviewView({el: $('.js-blogPreview')})
+            new NavigationSlidesView({el: '.js-navigationSlides'}),
+            new CultureView({el: '.js-culture'}),
+            new SectionHeaderView({el: '.js-sectionHeaderPremiumYardwear'}),
+            new ProductPreviewView({el: '.js-productPreview'}),
+            new BlogPreviewView({el: '.js-blogPreview'})
         ];
     }
 
