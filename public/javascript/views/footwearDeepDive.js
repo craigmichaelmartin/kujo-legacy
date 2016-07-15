@@ -13,7 +13,8 @@ const FootwearDeepDive = BaseView.extend({
         return _.template(template);
     },
 
-    initialize() {
+    initialize({domTargetSelector}) {
+        this.domTargetSelector = domTargetSelector;
         this.render();
     },
 

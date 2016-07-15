@@ -25,7 +25,14 @@ const Base = Backbone.View.extend({
         this.beforeRender && this.beforeRender();
         this.doRender();
         this.afterRender && this.afterRender();
+        if (this.domTargetSelector) {
+            this.insertIntoDom();
+        }
         return this;
+    },
+
+    insertIntoDom() {
+        $(this.domTargetSelector).empty().append(this.$el);
     },
 
     getTemplateData() {

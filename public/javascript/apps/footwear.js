@@ -38,7 +38,8 @@ const HomePage = View.extend({
 
     afterRender() {
         this.sections = [
-            new FootwearDeepDive({el: '.js-footwearDeepDive'})
+            // new FootwearDeepDive({el: '.js-footwearDeepDive'})
+            new FootwearDeepDive({domTargetSelector: '.js-footwearDeepDive'})
         ];
     }
 
