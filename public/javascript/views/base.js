@@ -1,4 +1,5 @@
 import Backbone from 'backbone';
+import _ from 'underscore';
 
 const fs = require('fs');
 const path = require('path');
@@ -17,22 +18,33 @@ const Base = Backbone.View.extend({
         return this;
     },
 
+    getHtml() {
+        return this.template()(this.getTemplateData());
+    },
+
+    getElements() {
+        return $(this._createElement(_.result(this, 'tagName'))).append(this.getHtml());
+    },
+
     doRender() {
-        this.$el.empty().append(this.template(this.getTemplateData()));
+        // Or - I could make using `el` an anti-pattern, and use (eg) `target`.
+        // this.$el.html(this.getHtml);
+        // this.beforeAttach && this.beforeAttach();
+        // $(this.target).empty.append(this.$el);
+        const elements = this.getElements();
+        this.beforeDomInsert && this.beforeDomInsert(elements);
+        this.domInsert(elements);
     },
 
     render() {
         this.beforeRender && this.beforeRender();
         this.doRender();
         this.afterRender && this.afterRender();
-        if (this.domTargetSelector) {
-            this.insertIntoDom();
-        }
         return this;
     },
 
-    insertIntoDom() {
-        $(this.domTargetSelector).empty().append(this.$el);
+    domInsert(elements) {
+        this.$el.empty().append(elements);
     },
 
     getTemplateData() {

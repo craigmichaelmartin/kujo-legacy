@@ -14,12 +14,11 @@ const FootwearDeepDive = BaseView.extend({
     },
 
     initialize({domTargetSelector}) {
-        this.domTargetSelector = domTargetSelector;
         this.render();
     },
 
-    afterRender() {
-        this.$('.js-footwearSlides').slick({
+    beforeDomInsert(elements) {
+        $(elements).find('.js-footwearSlides').slick({
             infinite: true,
             slidesToShow: 1,
             arrows: false,
