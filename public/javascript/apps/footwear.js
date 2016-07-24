@@ -16,7 +16,8 @@ const HomePage = View.extend({
 
     views: [],
 
-    initialize({appState, days, hours}) {
+    initialize({appState, target}) {
+        this.target = target;
         this.appState = appState;
     },
 
@@ -37,8 +38,8 @@ const HomePage = View.extend({
     },
 
     afterRender() {
-        this.sections = [
-            new FootwearDeepDive({el: '.js-footwearDeepDive'})
+        this.views = [
+            new FootwearDeepDive({target: '.js-footwearDeepDive'})
         ];
     }
 

@@ -21,7 +21,8 @@ const HeaderView = View.extend({
         return _.template(template);
     },
 
-    initialize({appState}) {
+    initialize({appState, target}) {
+        this.target = target;
         this.appState = appState;
         this.render();
     }

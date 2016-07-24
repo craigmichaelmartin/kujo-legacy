@@ -19,21 +19,30 @@ const Base = Backbone.View.extend({
     },
 
     getHtml() {
-        return this.template()(this.getTemplateData());
+        return this.template(this.getTemplateData());
     },
 
     getElements() {
         return $(this._createElement(_.result(this, 'tagName'))).append(this.getHtml());
     },
 
+    buildElement() {
+        return this.$el.html(this.getHtml());
+    },
+
     doRender() {
-        // Or - I could make using `el` an anti-pattern, and use (eg) `target`.
-        // this.$el.html(this.getHtml);
-        // this.beforeAttach && this.beforeAttach();
-        // $(this.target).empty.append(this.$el);
-        const elements = this.getElements();
-        this.beforeDomInsert && this.beforeDomInsert(elements);
-        this.domInsert(elements);
+        this.buildElement();
+        if (this.target) {
+            this.beforeAttach && this.beforeAttach();
+            this.attach();
+        }
+    },
+
+    attach() {
+        if (!(this.$target instanceof Backbone.$)) {
+            this.$target = Backbone.$(this.target);
+        }
+        this.$target.empty().append(this.$el);
     },
 
     render() {

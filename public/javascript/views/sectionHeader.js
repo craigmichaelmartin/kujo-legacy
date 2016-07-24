@@ -12,7 +12,8 @@ const SectionHeader = View.extend({
         return _.template(template);
     },
 
-    initialize() {
+    initialize({target}) {
+        this.target = target;
         this.render();
     }
 

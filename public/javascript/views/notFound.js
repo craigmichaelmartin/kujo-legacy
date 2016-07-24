@@ -12,7 +12,8 @@ const NotFoundView = BaseView.extend({
         return _.template(template);
     },
 
-    initialize() {
+    initialize({target}) {
+        this.target = target;
         this.render();
     },
 

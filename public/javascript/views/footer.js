@@ -1,6 +1,7 @@
 import View from './base';
 import _ from 'underscore';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import 'material-design-lite/dist/material.min.js';
 
 const fs = require('fs');
 const path = require('path');
@@ -12,7 +13,8 @@ const FooterView = View.extend({
         return _.template(template);
     },
 
-    initialize({appState}) {
+    initialize({appState, target}) {
+        this.target = target;
         this.appState = appState;
         this.render();
     }

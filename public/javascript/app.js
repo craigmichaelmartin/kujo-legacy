@@ -23,7 +23,8 @@ const AppView = View.extend({
         return _.template(template);
     },
 
-    initialize({appState, days, hours}) {
+    initialize({appState, target}) {
+        this.target = target;
         this.appState = appState;
         this.render();
         this.listenTo(this.appState, 'change:app', this.updateContent);
@@ -36,11 +37,11 @@ const AppView = View.extend({
     renderHeaderAndFooter() {
         this.header = new HeaderView({
             appState: this.appState,
-            el: '.js-navbar'
+            target: '.js-navbar'
         });
         this.footer = new FooterView({
             appState: this.appState,
-            el: '.js-footer'
+            target: '.js-footer'
         });
     },
 
@@ -62,11 +63,9 @@ const AppView = View.extend({
             'notFound': NotFoundApp
         };
         this.app && this.app.close();
-        // Hack for now
-        this.$('.js-content').length || this.$('.js-navbar').after('<div class="js-content"></div>');
         const Constructor = map[this.appState.get('app')];
         this.app = new Constructor({
-            el: '.js-content',
+            target: '.js-content',
             appState: this.appState
         });
         this.app.render();

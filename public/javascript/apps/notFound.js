@@ -16,8 +16,9 @@ const NotFound = View.extend({
 
     views: [],
 
-    initialize({appState, days, hours}) {
+    initialize({appState, target}) {
         this.appState = appState;
+        this.target = target;
     },
 
     closeViews() {
@@ -37,8 +38,8 @@ const NotFound = View.extend({
     },
 
     afterRender() {
-        this.sections = [
-            new NotFoundView({el: '.js-notFoundView'}),
+        this.views = [
+            new NotFoundView({target: '.js-notFoundView'}),
         ];
     }
 

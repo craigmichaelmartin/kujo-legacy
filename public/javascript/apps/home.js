@@ -20,8 +20,9 @@ const HomePage = View.extend({
 
     views: [],
 
-    initialize({appState, days, hours}) {
+    initialize({appState, target}) {
         this.appState = appState;
+        this.target = target;
     },
 
     closeViews() {
@@ -41,12 +42,12 @@ const HomePage = View.extend({
     },
 
     afterRender() {
-        this.sections = [
-            new NavigationSlidesView({el: '.js-navigationSlides'}),
-            new CultureView({el: '.js-culture'}),
-            new SectionHeaderView({el: '.js-sectionHeaderPremiumYardwear'}),
-            new ProductPreviewView({el: '.js-productPreview'}),
-            new BlogPreviewView({el: '.js-blogPreview'})
+        this.views = [
+            new NavigationSlidesView({target: '.js-navigationSlides'}),
+            new CultureView({target: '.js-culture'}),
+            new SectionHeaderView({target: '.js-sectionHeaderPremiumYardwear'}),
+            new ProductPreviewView({target: '.js-productPreview'}),
+            new BlogPreviewView({target: '.js-blogPreview'})
         ];
     }
 

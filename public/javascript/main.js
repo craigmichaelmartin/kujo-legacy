@@ -14,7 +14,7 @@ $.ajaxSetup({cache: false});
 const appState = new AppState();
 const appRouter = new AppRouter({appState}); // eslint-disable-line no-unused-vars
 const app = new AppView({
-    el: '.js-kujo',
+    target: '.js-kujo',
     appState
 });
 Backbone.history.start({/* pushState: true */});
