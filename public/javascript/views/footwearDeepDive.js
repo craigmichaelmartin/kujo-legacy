@@ -19,42 +19,27 @@ const FootwearDeepDive = BaseView.extend({
     },
 
     beforeClose() {
-        this.$('.js-footwearSlides').slick('unslick');
+        window.clearTimeout();
+        this.changeSlide = function() {};
     },
 
-    // Pretty frustrating. I Wanted to call slick on the element
-    // to transform it before it was inserted into the dom (rather
-    // than placing the html in, slick querying it out, transforming
-    // it, and then re-touching the dom to put it in) but this plan
-    // was riddled with problems in the library (slick).
-    // beforeAttach() {
-    //     this.$('.js-footwearSlides').slick({
-    //         infinite: true,
-    //         slidesToShow: 1,
-    //         arrows: false,
-    //         dots: false,
-    //         autoplay: true,
-    //         pauseOnHover: false,
-    //         speed: 1000,
-    //         fade: true,
-    //         cssEase: 'linear',
-    //         autoplaySpeed: 3000
-    //     });
-    // }
+    beforeAttach() {
+        this.current = 1;
+        this.slidesLength = this.$('.js-footwearSlide').length;
+    },
+
+    changeSlide() {
+        let next = this.current + 1;
+        if (next >= this.slidesLength) next = 1;
+        console.log(this.current);
+        this.$(`.js-footwearSlide:nth-child(${this.current})`).fadeOut(1000);
+        this.$(`.js-footwearSlide:nth-child(${next})`).fadeIn(1000);
+        this.current = next;
+        window.setTimeout(this.changeSlide.bind(this), 3000);
+    },
 
     afterRender() {
-        this.$('.js-footwearSlides').slick({
-            infinite: true,
-            slidesToShow: 1,
-            arrows: false,
-            dots: false,
-            autoplay: true,
-            pauseOnHover: false,
-            speed: 1000,
-            fade: true,
-            cssEase: 'linear',
-            autoplaySpeed: 3000
-        });
+        window.setTimeout(this.changeSlide.bind(this), 2000);
     }
 
 });

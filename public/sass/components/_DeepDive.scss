@@ -26,9 +26,13 @@
 }
 .DeepDive-pageHeaderImages {
     padding-bottom: 50px;
+    height: 560px;
 }
 .DeepDive-pageHeaderImage {
     height: 500px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .DeepDive .hr {
     margin-left: 150px;
