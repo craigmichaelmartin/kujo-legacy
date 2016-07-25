@@ -22,19 +22,16 @@ const Base = Backbone.View.extend({
         return this.template(this.getTemplateData());
     },
 
-    getElements() {
-        return $(this._createElement(_.result(this, 'tagName'))).append(this.getHtml());
-    },
-
     buildElement() {
         return this.$el.html(this.getHtml());
     },
 
     doRender() {
         this.buildElement();
-        if (this.target) {
+        if (this.target && !this.targetAttached) {
             this.beforeAttach && this.beforeAttach();
             this.attach();
+            this.targetAttached = true;
         }
     },
 
