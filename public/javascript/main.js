@@ -18,3 +18,10 @@ const app = new AppView({
     appState
 });
 Backbone.history.start({/* pushState: true */});
+// Hack for transparent paraHeaders to have the parallax scroll affect
+// (which needs the body to have the background image) but without
+// flashing the background image as the page loads. This hack waits until
+// the dom is ready before adding the class with the image css.
+// Possible fix: have the paraHeaders in front of a div with the image,
+// instead of the body having the image.
+$(()=> $('.js-kujo').addClass('kujo'));
