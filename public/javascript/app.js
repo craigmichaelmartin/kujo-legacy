@@ -30,18 +30,18 @@ const AppView = View.extend({
         this.listenTo(this.appState, 'change:app', this.updateContent);
     },
 
-    afterRender() {
+    beforeAttach() {
         this.renderHeaderAndFooter();
     },
 
     renderHeaderAndFooter() {
         this.header = new HeaderView({
             appState: this.appState,
-            target: '.js-navbar'
+            target: this.$('.js-navbar')
         });
         this.footer = new FooterView({
             appState: this.appState,
-            target: '.js-footer'
+            target: this.$('.js-footer')
         });
     },
 
@@ -65,7 +65,7 @@ const AppView = View.extend({
         this.app && this.app.close();
         const Constructor = map[this.appState.get('app')];
         this.app = new Constructor({
-            target: '.js-content',
+            target: this.$('.js-content'),
             appState: this.appState
         });
         this.app.render();

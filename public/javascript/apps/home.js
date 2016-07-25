@@ -43,11 +43,11 @@ const HomePage = View.extend({
 
     afterRender() {
         this.views = [
-            new NavigationSlidesView({target: '.js-navigationSlides'}),
-            new CultureView({target: '.js-culture'}),
-            new SectionHeaderView({target: '.js-sectionHeaderPremiumYardwear'}),
-            new ProductPreviewView({target: '.js-productPreview'}),
-            new BlogPreviewView({target: '.js-blogPreview'})
+            new NavigationSlidesView({target: this.$('.js-navigationSlides')}),
+            new CultureView({target: this.$('.js-culture')}),
+            new SectionHeaderView({target: this.$('.js-sectionHeaderPremiumYardwear')}),
+            new ProductPreviewView({target: this.$('.js-productPreview')}),
+            new BlogPreviewView({target: this.$('.js-blogPreview')})
         ];
     }
 

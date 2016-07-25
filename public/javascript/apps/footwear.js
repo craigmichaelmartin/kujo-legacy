@@ -37,9 +37,9 @@ const HomePage = View.extend({
         this.closeViews();
     },
 
-    afterRender() {
+    beforeAttach() {
         this.views = [
-            new FootwearDeepDive({target: '.js-footwearDeepDive'})
+            new FootwearDeepDive({target: this.$('.js-footwearDeepDive')})
         ];
     }
 

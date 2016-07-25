@@ -39,7 +39,7 @@ const NotFound = View.extend({
 
     afterRender() {
         this.views = [
-            new NotFoundView({target: '.js-notFoundView'}),
+            new NotFoundView({target: this.$('.js-notFoundView')}),
         ];
     }
 
