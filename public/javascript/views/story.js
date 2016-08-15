@@ -1,14 +1,13 @@
-import Backbone from 'backbone';
 import BaseView from './base';
 import _ from 'underscore';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import '../../../node_modules/slick-carousel/slick/slick.min.js';
+import '../../../node_modules/slick-carousel/slick/slick.js';
 
 const fs = require('fs');
 const path = require('path');
-const template = fs.readFileSync(path.join(__dirname, '/../templates/navigationSlides.html'), 'utf8');
+const template = fs.readFileSync(path.join(__dirname, '/../templates/storyBio.html'), 'utf8');
 
-const NavigationSlidesView = BaseView.extend({
+const StoryBioView = BaseView.extend({
 
     template() {
         return _.template(template);
@@ -36,20 +35,23 @@ const NavigationSlidesView = BaseView.extend({
     // }
 
     afterRender() {
-        this.$('.js-slides').slick({
+        this.$('.js-storySlides').slick({
+            dots: false,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
             infinite: true,
             slidesToShow: 1,
             arrows: false,
-            dots: true,
             autoplay: true,
             autoplaySpeed: 4000
         });
     },
 
     beforeClose() {
-        this.$('.js-slides').slick('unslick');
+        this.$('.js-storySlides').slick('unslick');
     }
 
 });
 
-export default NavigationSlidesView;
+export default StoryBioView;

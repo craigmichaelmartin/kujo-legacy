@@ -5,9 +5,9 @@ import '../../../node_modules/slick-carousel/slick/slick.js';
 
 const fs = require('fs');
 const path = require('path');
-const template = fs.readFileSync(path.join(__dirname, '/../templates/footwearDeepDive.html'), 'utf8');
+const template = fs.readFileSync(path.join(__dirname, '/../templates/apparelDeepDive.html'), 'utf8');
 
-const FootwearDeepDive = BaseView.extend({
+const ApparelDeepDive = BaseView.extend({
 
     template() {
         return _.template(template);
@@ -24,14 +24,14 @@ const FootwearDeepDive = BaseView.extend({
 
     beforeAttach() {
         this.current = 1;
-        this.slidesLength = this.$('.js-footwearSlide').length;
+        this.slidesLength = this.$('.js-apparelSlide').length;
     },
 
     changeSlide() {
         let next = this.current + 1;
         if (next >= this.slidesLength) next = 1;
-        this.$(`.js-footwearSlide:nth-child(${this.current})`).fadeOut(1000);
-        this.$(`.js-footwearSlide:nth-child(${next})`).fadeIn(1000);
+        this.$(`.js-apparelSlide:nth-child(${this.current})`).fadeOut(1000);
+        this.$(`.js-apparelSlide:nth-child(${next})`).fadeIn(1000);
         this.current = next;
         this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 3000);
     },
@@ -42,4 +42,4 @@ const FootwearDeepDive = BaseView.extend({
 
 });
 
-export default FootwearDeepDive;
+export default ApparelDeepDive;

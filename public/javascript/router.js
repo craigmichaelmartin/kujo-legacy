@@ -3,7 +3,7 @@ const KujoAppRouter = Backbone.Router.extend({
 
     get routes() {
         return {
-            '*splat': 'loadApp',
+            '*splat': 'loadApp'
         };
     },
 

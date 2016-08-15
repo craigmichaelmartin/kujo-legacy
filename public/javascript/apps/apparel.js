@@ -1,13 +1,14 @@
 import View from '../views/base';
-import FootwearDeepDive from '../views/footwearDeepDive';
+import ApparelDeepDive from '../views/apparelDeepDive';
+import $ from 'jquery';
 import _ from 'underscore';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 const fs = require('fs');
 const path = require('path');
-const template = fs.readFileSync(path.join(__dirname, '/../templates/footwear.html'), 'utf8');
+const template = fs.readFileSync(path.join(__dirname, '/../templates/apparel.html'), 'utf8');
 
-const Footwear = View.extend({
+const Apparel = View.extend({
 
     template() {
         return _.template(template);
@@ -38,10 +39,10 @@ const Footwear = View.extend({
 
     beforeAttach() {
         this.views = [
-            new FootwearDeepDive({target: this.$('.js-footwearDeepDive')})
+            new ApparelDeepDive({target: this.$('.js-apparelDeepDive')})
         ];
     }
 
 });
 
-export default Footwear;
+export default Apparel;

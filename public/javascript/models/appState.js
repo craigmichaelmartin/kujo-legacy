@@ -15,7 +15,7 @@ const AppState = Model.extend({
             'home': 'home',
             'footwear': 'footwear',
             'apparel': 'apparel',
-            'our-story': 'ourStory',
+            'story': 'story',
             'how-we-give': 'howWeGive',
             'contact-us': 'contactUs',
             'blog': 'blog',
@@ -29,7 +29,7 @@ const AppState = Model.extend({
 
     get appsList() {
         return [
-            'home', 'footwear', 'apparel', 'ourStory',
+            'home', 'footwear', 'apparel', 'story',
             'howWeGive', 'contactUs', 'blog', 'notFound'
         ];
     },

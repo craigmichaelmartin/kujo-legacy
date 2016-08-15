@@ -1,8 +1,8 @@
 import View from './views/base';
 import HomeApp from './apps/home';
 import FootwearApp from './apps/footwear';
-// import ApparelApp from './apps/apparel';
-// import OurStoryApp from './apps/our-story';
+import ApparelApp from './apps/apparel';
+import StoryApp from './apps/story';
 // import HowWeGiveApp from './apps/how-we-give';
 // import ContactUsApp from './apps/contact-us';
 // import BlogApp from './apps/blog';
@@ -53,14 +53,14 @@ const AppView = View.extend({
 
     updateContent() {
         const map = {
-            'home': HomeApp,
-            'footwear': FootwearApp,
-            // 'apparel': Apparel,
-            // 'ourStory': OurStory,
+            home: HomeApp,
+            footwear: FootwearApp,
+            apparel: ApparelApp,
+            story: StoryApp,
             // 'howWeGive': HowWeGive,
             // 'contactUs': ContactUs,
             // 'blog': Blog,
-            'notFound': NotFoundApp
+            notFound: NotFoundApp
         };
         this.app && this.app.close();
         const Constructor = map[this.appState.get('app')];

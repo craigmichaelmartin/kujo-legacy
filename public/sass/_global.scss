@@ -64,6 +64,8 @@ a:hover {
     left: 50%;
 }
 .slick-dots {
+    /* TODO: Used to look nice; don't now. */
+    display: none;
     bottom: 25px;
 }
 .slick-dots li button:before {
