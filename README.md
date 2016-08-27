@@ -10,3 +10,5 @@ TODO:
   - make backbone views use dependency injection to
     be generic and reusable (deep dives, slides, apps),
     and so reduce payload and maintenance
+  - remove inline html styles
+  - make scss utility files

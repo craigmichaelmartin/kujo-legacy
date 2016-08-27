@@ -24,25 +24,20 @@ const StoryBioView = BaseView.extend({
 
     beforeAttach() {
         this.current = 1;
+        this.slidesLength = this.$('.js-storySlide').length;
     },
 
     changeSlide() {
         let next = this.current + 1;
-        if (next >= this.slides.length) next = 1;
-        this.$('.js-storySlides').css('background-image', `url(${this.slides[next]})`);
+        if (next > this.slidesLength) next = 1;
+        this.$(`.js-storySlide:nth-child(${this.current})`).fadeOut(2000);
+        this.$(`.js-storySlide:nth-child(${next})`).fadeIn(2000);
         this.current = next;
-        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 5000);
+        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 4000);
     },
 
-    slides: [
-        'public/images/phase1.png',
-        'public/images/phase2.png',
-        'public/images/phase3.png',
-        'public/images/phase4.png'
-    ],
-
     afterRender() {
-        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 5000);
+        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 4000);
     }
 
 });
