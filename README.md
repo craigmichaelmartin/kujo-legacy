@@ -12,3 +12,4 @@ TODO:
     and so reduce payload and maintenance
   - remove inline html styles
   - make scss utility files
+  - break page-centric suit css modules into re-usable components

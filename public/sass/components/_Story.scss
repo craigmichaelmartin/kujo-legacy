@@ -17,6 +17,7 @@
     padding-bottom: 50px;
     color: white;
     text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.8);
+    line-height: .9em;
 }
 .Story-pageHeaderSnippet {
     line-height: 1.2;
@@ -51,6 +52,9 @@
 }
 .Story-pageHeaderImage--3 {
     background-image: url('/public/images/phase3.1.png');
+}
+.Story-pageHeaderImage--a {
+    background-image: url('/public/images/picnic.jpg');
 }
 .Story-body {
     width: 100%;

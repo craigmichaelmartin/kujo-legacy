@@ -12,13 +12,13 @@ const AppState = Model.extend({
     get appsMap() {
         return {
             '': 'home',
-            'home': 'home',
-            'footwear': 'footwear',
-            'apparel': 'apparel',
-            'story': 'story',
-            'how-we-give': 'howWeGive',
-            'contact-us': 'contactUs',
-            'blog': 'blog',
+            home: 'home',
+            footwear: 'footwear',
+            apparel: 'apparel',
+            story: 'story',
+            give: 'give',
+            contact: 'contact',
+            blog: 'blog',
             'not-found': 'notFound'
         };
     },
@@ -30,7 +30,7 @@ const AppState = Model.extend({
     get appsList() {
         return [
             'home', 'footwear', 'apparel', 'story',
-            'howWeGive', 'contactUs', 'blog', 'notFound'
+            'give', 'contact', 'blog', 'notFound'
         ];
     },
 

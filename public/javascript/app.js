@@ -3,7 +3,7 @@ import HomeApp from './apps/home';
 import FootwearApp from './apps/footwear';
 import ApparelApp from './apps/apparel';
 import StoryApp from './apps/story';
-// import HowWeGiveApp from './apps/how-we-give';
+import GiveApp from './apps/give';
 // import ContactUsApp from './apps/contact-us';
 // import BlogApp from './apps/blog';
 import NotFoundApp from './apps/notFound.js';
@@ -57,7 +57,7 @@ const AppView = View.extend({
             footwear: FootwearApp,
             apparel: ApparelApp,
             story: StoryApp,
-            // 'howWeGive': HowWeGive,
+            give: GiveApp,
             // 'contactUs': ContactUs,
             // 'blog': Blog,
             notFound: NotFoundApp
