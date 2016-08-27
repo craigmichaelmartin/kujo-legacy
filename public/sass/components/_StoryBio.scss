@@ -1,0 +1,72 @@
+.Story {
+    width: 100%;
+    background-color: white;
+}
+.Story-pageHeader {
+    text-align: center;
+    background-color: #FCFCFC;
+}
+.Story-pageHeaderText {
+    font-size: 68px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.Story-pageHeaderSnippet {
+    line-height: 1.2;
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #7E7E7E;
+}
+.Story-pageHeaderImages {
+    padding-bottom: 50px;
+    height: 560px;
+}
+.Story-pageHeaderImage {
+    height: 500px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.Story .hr {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    background-color: white;
+    border-top: 1px solid #9cc100;
+    padding: 0; 
+}
+.Story-item {
+    text-align: center;
+}
+.Story-itemHeader {
+    font-size: 58px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #333;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.Story-itemSnippet {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #7E7E7E;
+    line-height: 1.2;
+}
+.Story-itemImage {
+    padding-top: 30px;
+}

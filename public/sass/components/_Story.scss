@@ -1,0 +1,90 @@
+.Story {
+    width: 100%;
+    background-color: white;
+}
+.Story-pageHeader {
+    text-align: center;
+    background-color: #FCFCFC;
+}
+.Story-pageHeaderText {
+    font-size: 68px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: #333;
+    text-transform: uppercase;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: white;
+    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.8);
+}
+.Story-pageHeaderSnippet {
+    line-height: 1.2;
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    text-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.8);
+}
+.Story-pageHeaderImages {
+    height: 500px;
+    position: relative;
+}
+.Story-pageHeaderImage {
+    height: 500px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    // transition: background 2s ease-in-out;
+}
+.Story-pageHeaderImage + .Story-pageHeaderImage {
+    display: none;
+}
+.Story-pageHeaderImage--1 {
+    background-image: url('/public/images/phase1.1.png');
+}
+.Story-pageHeaderImage--2 {
+    background-image: url('/public/images/phase2.1.png');
+}
+.Story-pageHeaderImage--3 {
+    background-image: url('/public/images/phase3.1.png');
+}
+.Story-body {
+    width: 100%;
+}
+.Story .hr {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    background-color: white;
+    border-top: 1px solid #9cc100;
+    padding: 0; 
+}
+.Story-item {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.Story-itemHeader {
+    font-size: 58px;
+    letter-spacing: 2.5px;
+    text-align: left;
+    font-weight: 200;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    line-height: .9em;
+}
+.Story-itemSnippet {
+    font-size: 28px;
+    letter-spacing: 2.5px;
+    font-weight: 200;
+    color: #7E7E7E;
+    line-height: 1.2;
+}
