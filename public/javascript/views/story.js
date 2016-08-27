@@ -18,38 +18,31 @@ const StoryBioView = BaseView.extend({
         this.render();
     },
 
-    // Pretty frustrating. I Wanted to call slick on the element
-    // to transform it before it was inserted into the dom (rather
-    // than placing the html in, slick querying it out, transforming
-    // it, and then re-touching the dom to put it in) but this plan
-    // was riddled with problems in the library (slick).
-    // beforeAttach() {
-    //     this.$('.js-slides').slick({
-    //         infinite: true,
-    //         slidesToShow: 1,
-    //         arrows: false,
-    //         dots: true,
-    //         autoplay: true,
-    //         autoplaySpeed: 4000
-    //     });
-    // }
-
-    afterRender() {
-        this.$('.js-storySlides').slick({
-            dots: false,
-            speed: 500,
-            fade: true,
-            cssEase: 'linear',
-            infinite: true,
-            slidesToShow: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 4000
-        });
+    beforeClose() {
+        window.clearTimeout(this.changeSlideTimeout);
     },
 
-    beforeClose() {
-        this.$('.js-storySlides').slick('unslick');
+    beforeAttach() {
+        this.current = 1;
+    },
+
+    changeSlide() {
+        let next = this.current + 1;
+        if (next >= this.slides.length) next = 1;
+        this.$('.js-storySlides').css('background-image', `url(${this.slides[next]})`);
+        this.current = next;
+        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 5000);
+    },
+
+    slides: [
+        'public/images/phase1.png',
+        'public/images/phase2.png',
+        'public/images/phase3.png',
+        'public/images/phase4.png'
+    ],
+
+    afterRender() {
+        this.changeSlideTimeout = window.setTimeout(this.changeSlide.bind(this), 5000);
     }
 
 });

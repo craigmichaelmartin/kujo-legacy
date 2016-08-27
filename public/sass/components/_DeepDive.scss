@@ -6,6 +6,10 @@
     text-align: center;
     background-color: #FCFCFC;
 }
+.DeepDive-pageHeader--full {
+    background-image: url('../images/phase1.png');
+    transition: background 2s ease-in-out;
+}
 .DeepDive-pageHeaderText {
     font-size: 68px;
     letter-spacing: 2.5px;
