@@ -4,7 +4,7 @@ import FootwearApp from './apps/footwear';
 import ApparelApp from './apps/apparel';
 import StoryApp from './apps/story';
 import GiveApp from './apps/give';
-// import ContactUsApp from './apps/contact-us';
+import ContactApp from './apps/contact';
 // import BlogApp from './apps/blog';
 import NotFoundApp from './apps/notFound.js';
 import HeaderView from './views/header';
@@ -58,7 +58,7 @@ const AppView = View.extend({
             apparel: ApparelApp,
             story: StoryApp,
             give: GiveApp,
-            // 'contactUs': ContactUs,
+            contact: ContactApp,
             // 'blog': Blog,
             notFound: NotFoundApp
         };
