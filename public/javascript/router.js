@@ -22,6 +22,7 @@ const KujoAppRouter = Backbone.Router.extend({
     updatePeripheralsWithState(model) {
         this.navigate(model.getUrl());
         document.title = model.getTitle();
+        window.scrollTo(0, 0);
     }
 
 });
