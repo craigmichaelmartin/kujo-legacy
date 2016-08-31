@@ -5,7 +5,7 @@ import ApparelApp from './apps/apparel';
 import StoryApp from './apps/story';
 import GiveApp from './apps/give';
 import ContactApp from './apps/contact';
-// import BlogApp from './apps/blog';
+import BlogApp from './apps/blog';
 import NotFoundApp from './apps/notFound.js';
 import HeaderView from './views/header';
 import FooterView from './views/footer';
@@ -59,7 +59,7 @@ const AppView = View.extend({
             story: StoryApp,
             give: GiveApp,
             contact: ContactApp,
-            // 'blog': Blog,
+            blog: BlogApp,
             notFound: NotFoundApp
         };
         this.app && this.app.close();
