@@ -1,6 +1,24 @@
 <div class="Form">
     <div class="container">
-        <div class="js-formType"></div>
-        <div class="js-formContent"></div>
+        <div class="Form-links">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Sales</p>
+                            <p><a href="mailto:<%= salesEmail%>"><%= salesEmail %></a></p>
+                            <p><a href="tel:<%= salesPhone %>"><%= salesPhonePresentational %></a></p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p>Support</p>
+                            <p><a href="mailto:<%= supportEmail %>"><%= supportEmail %></a></p>
+                            <p><a href="tel:<%= supportPhone %>"><%= supportPhonePresentational %></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Form-type js-formType"></div>
+        <div class="Form-content js-formContent"></div>
     </div>
 </div>

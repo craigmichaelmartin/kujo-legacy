@@ -7,4 +7,56 @@
     text-align: center;
     z-index: 999;
     line-height: 1.2;
+    padding-top: 80px;
+}
+
+.Form-button {
+    letter-spacing: 2.5px;
+    font-weight: 200;
+}
+
+.Form-type {
+    padding-top: 50px;
+    clear: both;
+}
+
+.Form-button:hover {
+    border-width: 2px;
+    background: transparent;
+    padding-top: 9px !important; /* TODO: hack to undo global hack */
+    padding-bottom: 9px !important; /* TODO: hack to undo global hack */
+}
+
+.Form-button:not(.is-active):first-child:hover {
+    border-right: 0;
+    padding-right: 17px;
+}
+.Form-button:not(.is-active):nth-child(2):hover {
+    border-left: 0;
+    padding-left: 17px;
+}
+.Form-button.is-active:hover {
+    padding-left: 16px !important; /* TODO: hack to undo global hack */
+    padding-right: 16px !important; /* TODO: hack to undo global hack */
+}
+
+.Form-button.is-active {
+    border-width: 2px;
+    background: transparent;
+    padding-top: 9px !important; /* TODO: hack to undo global hack */
+    padding-bottom: 9px !important; /* TODO: hack to undo global hack */
+}
+
+.Form p {
+    letter-spacing: 1.5px;
+    font-weight: 200;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.Form a {
+    font-weight: 200;
 }
