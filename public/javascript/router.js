@@ -14,14 +14,14 @@ const KujoAppRouter = Backbone.Router.extend({
     },
 
     loadApp(app) {
-        // transform url 
-        var appName = this.appState.getAppName(app);
+        // transform url
+        const appName = this.appState.getAppName(app);
         this.appState.set('app', appName, {validate: true});
     },
 
     updatePeripheralsWithState(model) {
         this.navigate(model.getUrl());
-        document.title = model.getTitle();
+        document.title = `Kujo - ${model.getTitle()}`;
         window.scrollTo(0, 0);
     }
 
