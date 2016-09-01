@@ -35,10 +35,14 @@ const Base = Backbone.View.extend({
         }
     },
 
-    attach() {
-        if (!(this.$target instanceof Backbone.$)) {
+    ensureTarget() {
+        if (this.target && !(this.$target instanceof Backbone.$)) {
             this.$target = Backbone.$(this.target);
         }
+    },
+
+    attach() {
+        this.ensureTarget();
         this.$target.empty().append(this.$el);
     },
 

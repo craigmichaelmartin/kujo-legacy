@@ -16,3 +16,4 @@ TODO:
   - quicken underscore templates by not using `with`
   - `template()` ?
   - pageheader pass in template props instead of whole new template
+  - refactor collection views to extend base collection
