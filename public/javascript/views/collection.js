@@ -4,7 +4,7 @@ export default BaseView.extend({
 
     destroyItems() {
         while (this.views.length > 0) {
-            this.views[0].deleteView();
+            this.views[0].close();
             delete this.views[0];
             this.views.shift();
         }
