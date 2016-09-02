@@ -1,0 +1,32 @@
+.BlogItem {
+    border: 1px solid #A0A0A0;
+    border-radius: 3px;
+    background-color: #FCFCFC;
+    letter-spacing: 1.5px;
+    font-weight: 200;
+    color: #333;
+    line-height: 1.2;
+    width: 100%;
+    height: 220px;
+    margin-bottom: 15px;
+}
+.BlogItem-image {
+    width: 200px;
+    height: 200px;
+    margin: 10px 40px 10px 10px;
+    background-image: url("/public/images/girloutside.jpg");
+    background-size: cover;
+}
+.Blog-header {
+    font-size: 32px;
+    text-align: center;
+}
+.Sidebar-content {
+    background-color: white;
+    letter-spacing: 1.5px;
+    font-weight: 200;
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    line-height: 2;
+}
