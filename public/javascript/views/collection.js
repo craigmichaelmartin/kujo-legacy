@@ -2,10 +2,6 @@ import BaseView from './base';
 
 export default BaseView.extend({
 
-    views: [],
-
-    innerEl: document.createElement('div'),
-
     destroyItems() {
         while (this.views.length > 0) {
             this.views[0].deleteView();
@@ -17,7 +13,7 @@ export default BaseView.extend({
     emptyEl() {
         this.destroyItems();
         this.$el.empty();
-        this.innerEl.innerHtml = '';
+        this.el.innerHtml = '';
     },
 
     beforeRender() {
@@ -40,7 +36,7 @@ export default BaseView.extend({
     },
 
     appendItems() {
-        this.$target.append(this.innerEl);
+        this.$target.append(this.el);
     },
 
     assignOne(model, index) {
@@ -52,7 +48,7 @@ export default BaseView.extend({
     },
 
     appendItem({html}) {
-        this.innerEl.appendChild(html);
+        this.el.appendChild(html);
     },
 
     getTemplateData() {

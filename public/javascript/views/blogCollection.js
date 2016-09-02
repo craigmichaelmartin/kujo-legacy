@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 const BlogCollectionView = BaseCollectionView.extend({
 
     initialize({target, collection}) {
+        this.views = [];
         this.target = target;
         this.collection = collection;
         this.render();
