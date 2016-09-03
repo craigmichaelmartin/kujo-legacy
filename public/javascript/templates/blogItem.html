@@ -1,21 +1,26 @@
 <div class="BlogItem">
-    <div class="BlogItem-image"></div>
     <div class="BlogItem-content">
         <div class="BlogItem-header">
-            Outdoor Games this Summer
+            <%= title %>
         </div>
-        <div class="BlogItem-date">
-            10 days ago
-        </div>
-        <div class="BlogItem-readTime">
-            6 minute read
+        <div class="BlogItem-metadata row">
+            <div class="col-sm-6">
+                <div class="BlogItem-date">
+                    <%= date %>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="BlogItem-readTime">
+                    <%= readTime %>
+                </div>
+            </div>
         </div>
         <div class="BlogItem-text">
-            Have fun this summer with the whole family with these silly games.
-            Why silly, because it is silly o'clock. But there is more text too.
+            <%= body %>
         </div>
         <div class="BlogItem-more">
             Read more...
         </div>
     </div>
+    <div class="BlogItem-image" style="background-image: url('<%= previewImage %>');"></div>
 </div>

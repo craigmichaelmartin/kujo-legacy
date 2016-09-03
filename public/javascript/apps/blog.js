@@ -22,8 +22,39 @@ const BlogApp = View.extend({
     initialize({appState, target}) {
         this.target = target;
         this.appState = appState;
-        this.blogCollection = new BlogCollection([{num: 1}, {num: 2}]);
-        this.blogFilters = new BlogFilters([{num: 3}, {num: 4}]);
+        this.blogCollection = new BlogCollection([{
+            title: 'Outdoor Games this Summer',
+            previewImage: '/public/images/girloutside.jpg',
+            date: '2 Days Ago',
+            readTime: '6 minutes',
+            body: 'Have fun this summer with the whole family with these silly games. Why silly, because it is silly oclock. But there is more text too.'
+        }, {
+            title: 'The Kujo Burger',
+            previewImage: '/public/images/food-chicken-meat-outdoors.jpg',
+            date: '9 Days Ago',
+            readTime: '3 minutes',
+            body: 'No one knows burgers like cows. And the cows have spoken. Eat more chicken. We will check how the chickens feel later. It is burger time.'
+        }, {
+            title: 'The Best & Worst in Weed Killers',
+            previewImage: '/public/images/dand.jpeg',
+            date: 'August 15, 2016',
+            readTime: '14 minutes',
+            body: 'See you later weeds, I thought to myself as I sprayed weed killer on my flower beds. Joke was on me, the weeds had their umbrellas out.'
+        }]);
+        this.blogFilters = new BlogFilters([
+            {text: 'Most Recent'},
+            {text: 'Most Shared'},
+            {text: 'Minute to Fix It'},
+            {text: 'Gardening'},
+            {text: 'Yard Care Tips & Tricks'},
+            {text: 'Build-it-Yourself'},
+            {text: 'Do-It-Yourself'},
+            {text: 'Family Fun'},
+            {text: 'Decorating'},
+            {text: 'Hosting & Recipes'},
+            {text: 'Product Reviews'},
+            {text: 'Mythbusters'}
+        ]);
     },
 
     closeViews() {

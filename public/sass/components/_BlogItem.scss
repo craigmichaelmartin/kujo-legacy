@@ -1,5 +1,6 @@
 .BlogItem {
-    border: 1px solid #A0A0A0;
+    // border: 1px solid #A0A0A0;
+    border: 1px solid #DADADA;
     border-radius: 3px;
     background-color: #FCFCFC;
     letter-spacing: 1.5px;
@@ -14,19 +15,37 @@
     width: 200px;
     height: 200px;
     margin: 10px 40px 10px 10px;
-    background-image: url("/public/images/girloutside.jpg");
     background-size: cover;
 }
-.Blog-header {
+.BlogItem-header {
     font-size: 32px;
-    text-align: center;
 }
-.Sidebar-content {
-    background-color: white;
+.BlogItem-metadata {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    padding-bottom: 15px;
+}
+.BlogItem-date {
+}
+.BlogItem-readTime {
+}
+.BlogItem-content {
     letter-spacing: 1.5px;
     font-weight: 200;
     font-size: 22px;
     color: #333;
-    text-align: center;
-    line-height: 2;
+    text-align: left;
+    float: left;
+    padding-left: 240px;
+    padding-top: 10px;
+}
+.BlogItem-text {
+    height: 100px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+.BlogItem-more {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    padding-top: 8px;
 }
