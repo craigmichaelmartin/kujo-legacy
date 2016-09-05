@@ -10,8 +10,23 @@ const BlogItem = BaseView.extend({
 
     template: _.template(template),
 
-    initialize({target}) {
+    events() {
+        return {
+            'click .js-readMore': 'openBlogItem'
+        };
+    },
+
+    initialize({target, appState}) {
         this.target = target;
+        this.appState = appState;
+    },
+
+    openBlogItem() {
+        this.appState.set({
+            activeApp: true,
+            id: this.model.get('id'),
+            title: this.model.get('title')
+        });
     }
 
 });

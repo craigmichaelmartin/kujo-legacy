@@ -5,6 +5,13 @@ main app's load content does ajax request for each subapp?
 Progressive web app - server side rendered with service workers
 
 
+URL Routing:
+Router listens to all appStateCollection changes, and updates peripherals based on calls to that appState model
+Router kicks off setting appropriate appState model on hard url navigation
+App.js listens to change:activeApp only - to kick off that app.
+Each app listens to own appState attributes and updates as desired.
+
+
 TODO:
   - separate out slides
   - make backbone views use dependency injection to

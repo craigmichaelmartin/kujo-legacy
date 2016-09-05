@@ -9,7 +9,6 @@ import BlogApp from './apps/blog';
 import NotFoundApp from './apps/notFound.js';
 import HeaderView from './views/header';
 import FooterView from './views/footer';
-import $ from 'jquery';
 import _ from 'underscore';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
@@ -23,11 +22,11 @@ const AppView = View.extend({
         return _.template(template);
     },
 
-    initialize({appState, target}) {
+    initialize({appStateCollection, target}) {
         this.target = target;
-        this.appState = appState;
+        this.appStateCollection = appStateCollection;
         this.render();
-        this.listenTo(this.appState, 'change:app', this.updateContent);
+        this.listenTo(this.appStateCollection, 'change:activeApp', this.updateContent);
     },
 
     beforeAttach() {
@@ -36,11 +35,11 @@ const AppView = View.extend({
 
     renderHeaderAndFooter() {
         this.header = new HeaderView({
-            appState: this.appState,
+            appStateCollection: this.appStateCollection,
             target: this.$('.js-navbar')
         });
         this.footer = new FooterView({
-            appState: this.appState,
+            appStateCollection: this.appStateCollection,
             target: this.$('.js-footer')
         });
     },
@@ -51,7 +50,9 @@ const AppView = View.extend({
         this.footer && this.footer.close();
     },
 
-    updateContent() {
+    // Place these references in the respective state model?
+    // Have a separate router for each state model?
+    updateContent(appStateModel) {
         const map = {
             home: HomeApp,
             footwear: FootwearApp,
@@ -63,10 +64,11 @@ const AppView = View.extend({
             notFound: NotFoundApp
         };
         this.app && this.app.close();
-        const Constructor = map[this.appState.get('app')];
+        const app = appStateModel.get('app');
+        const Constructor = map[app];
         this.app = new Constructor({
             target: this.$('.js-content'),
-            appState: this.appState
+            appState: this.appStateCollection.getAppStateModel(app)
         });
         this.app.render();
     }

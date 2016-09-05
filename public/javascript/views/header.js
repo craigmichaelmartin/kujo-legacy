@@ -1,5 +1,6 @@
 import View from './base';
 import _ from 'underscore';
+import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 const fs = require('fs');
@@ -14,16 +15,21 @@ const HeaderView = View.extend({
 
     updateAppState(e) {
         const $currentTarget = $(e.currentTarget);
-        this.appState.set($currentTarget.data('key'), $currentTarget.data('value'), {validate: true});
+        this.appStateCollection.setAppStateModel({
+            app: $currentTarget.data('value'),
+            attrs: {
+                activeApp: true
+            }
+        });
     },
 
     template() {
         return _.template(template);
     },
 
-    initialize({appState, target}) {
+    initialize({appStateCollection, target}) {
         this.target = target;
-        this.appState = appState;
+        this.appStateCollection = appStateCollection;
         this.render();
     }
 

@@ -3,19 +3,46 @@ import 'babel-polyfill';
 import './utilities/leak_jquery';
 import AppView from './app';
 import AppRouter from './router';
-import AppState from './models/appState';
+import GenericAppStateModel from './models/appState';
+import BlogStateModel from './models/blogState';
+import AppStateCollection from './collections/appState';
 import Backbone from 'backbone';
-import _ from 'underscore';
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 $.ajaxSetup({cache: false});
 
-const appState = new AppState();
-const appRouter = new AppRouter({appState}); // eslint-disable-line no-unused-vars
+const appStateCollection = new AppStateCollection([
+    new GenericAppStateModel({
+        app: 'home'
+    }),
+    new GenericAppStateModel({
+        app: 'footwear'
+    }),
+    new GenericAppStateModel({
+        app: 'apparel'
+    }),
+    new GenericAppStateModel({
+        app: 'story'
+    }),
+    new GenericAppStateModel({
+        app: 'contact'
+    }),
+    new GenericAppStateModel({
+        app: 'give'
+    }),
+    new BlogStateModel({
+        app: 'blog'
+    }),
+    new GenericAppStateModel({
+        app: 'notFound'
+    })
+]);
+
+const appRouter = new AppRouter({appStateCollection}); // eslint-disable-line no-unused-vars
 const app = new AppView({
     target: '.js-kujo',
-    appState
+    appStateCollection
 });
 Backbone.history.start({/* pushState: true */});
 // Hack for transparent paraHeaders to have the parallax scroll affect

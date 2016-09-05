@@ -4,15 +4,16 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 const BlogCollectionView = BaseCollectionView.extend({
 
-    initialize({target, collection}) {
+    initialize({target, collection, appState}) {
         this.views = [];
         this.target = target;
         this.collection = collection;
+        this.appState = appState;
         this.render();
     },
 
     createItemView({model}) {
-        return new BlogItem({model});
+        return new BlogItem({model, appState: this.appState});
     }
 
 });
