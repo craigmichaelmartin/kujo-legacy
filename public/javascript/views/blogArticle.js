@@ -1,6 +1,6 @@
 import View from '../views/base';
 import BlogArticleHeader from '../views/blogArticleHeader';
-// import BlogArticleBody from '../views/blogArticleBody';
+import BlogArticleBody from '../views/blogArticleBody';
 import _ from 'underscore';
 import Backbone from 'backbone';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -44,12 +44,16 @@ const BlogApp = View.extend({
         this.views = [
             new BlogArticleHeader({
                 target: this.$('.js-blogHeader'),
-                model: new Backbone.Model({title: 'Test Title'})
+                model: new Backbone.Model({title: 'The Kujo Burger'})
+            }),
+            new BlogArticleBody({
+                target: this.$('.js-blogBody'),
+                model: new Backbone.Model({
+                    readTime: '3 minutes',
+                    date: '9 days ago',
+                    body: 'No one knows burgers like cows. And the cows have spoken. Eat more chicken. We will check how the chickens feel later. It is burger time. Ised do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                })
             })
-            // new BlogArticleBody({
-            //     target: this.$('.js-blogHeader'),
-            //     model: this.appState.blogArticle
-            // })
         ];
     }
 
