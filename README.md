@@ -24,3 +24,5 @@ TODO:
   - `template()` ?
   - pageheader pass in template props instead of whole new template
   - refactor collection views to extend base collection
+  - Unite all the story headers in one css/backbone component!
+  - types of components? app, collection

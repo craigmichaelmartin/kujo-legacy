@@ -13,8 +13,19 @@ const AppStateCollection = Collection.extend({
 
     setAppStateModel({app, attrs}) {
         const model = this.getAppStateModel(app);
+        // TODO: Overly simple. Use method on specific model?
         model.clear({silent: true}).set(_.extend({}, attrs, {app}));
     },
+
+    // setAppStateModel({app, attrs}) {
+    //     const model = this.getAppStateModel(app);
+    //     // TODO: Overly simple. Use specific model?
+    //     const clearedAttrs = _.mapObject(model.attributes, (val, key) => {
+    //         if (key === 'app') return val;
+    //         return '';
+    //     });
+    //     model.set(_.extend({}, clearedAttrs, attrs));
+    // },
 
     ensureOnlyOneActive(one) {
         this.each((model) => {

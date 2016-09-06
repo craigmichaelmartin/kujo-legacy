@@ -28,7 +28,10 @@ const Base = Backbone.View.extend({
 
     doRender() {
         this.buildElement();
-        if (this.target && !this.targetAttached) {
+        // commented out for blog app (maybe once internals are separated
+        // into browse vs article, this won't me needed)
+        // why was it added in the first place though?
+        if (this.target ) { //&& !this.targetAttached) {
             this.beforeAttach && this.beforeAttach();
             this.attach();
             this.targetAttached = true;
