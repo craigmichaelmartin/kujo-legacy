@@ -43,9 +43,7 @@
     "sass-lint": "^1.7.0",
     "serve-favicon": "~2.3.0",
     "slick-carousel": "^1.6.0",
-    "underscore": "^1.8.3"
-  },
-  "devDependencies": {
+    "underscore": "^1.8.3",
     "autoprefixer": "~6.3.3",
     "babel": "~5.8.19",
     "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
