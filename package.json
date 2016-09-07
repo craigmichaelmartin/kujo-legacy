@@ -20,6 +20,7 @@
     "lint": "run-s css:lint js:lint",
     "postinstall": "run-s build",
     "build": "run-p css:build js:build",
+    "fresh": "npm install && npm run build && npm start",
     "start": "node ./bin/www",
     "test": "run-s lint js:test",
     "watch": "run-p css:watch js:watch"
