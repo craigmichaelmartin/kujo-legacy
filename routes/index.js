@@ -7,7 +7,7 @@ router.get('/home', function(req, res, next) {
 });
 
 router.get('/*', function(req, res) {
-    res.render('index.html');
+    res.sendFile(__dirname + '/../index.html');
 });
 
 module.exports = router;
