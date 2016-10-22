@@ -26,6 +26,9 @@ const ContactFormType = View.extend({
 
     typeChanged(ev) {
         this.model.set('type', Backbone.$(ev.currentTarget).data('value'));
+        // TODO: It's a bad sign I need to add this. Guessing it is
+        // due to using `target`. I'll have to circle back on this.
+        this.delegateEvents();
     }
 
 });

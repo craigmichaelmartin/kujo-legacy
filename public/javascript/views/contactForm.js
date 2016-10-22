@@ -30,7 +30,7 @@ const ContactApp = View.extend({
             customer: ContactFormCustomer,
             retailer: ContactFormRetailer
         };
-        const constructor = mapper[this.model.get('type')] || mapper.other;
+        const constructor = mapper[this.model.get('type')];
         this.formContent.close();
         this.formContent = new constructor({
             target: this.$('.js-formContent'),

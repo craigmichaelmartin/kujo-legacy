@@ -3,6 +3,7 @@ import ContactHeader from '../views/contactHeader';
 import ContactForm from '../views/contactForm';
 import _ from 'underscore';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import 'material-design-lite/dist/material.min.js';
 
 const fs = require('fs');
 const path = require('path');
