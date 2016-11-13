@@ -1,13 +1,19 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const restRoutes = require('./rest');
+const pageRoutes = require('./pages');
 
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-    res.render('index.html');
-});
+const configureForApp = function (app) {
+    const router = express.Router();
 
-router.get('/*', function(req, res) {
-    res.redirect('/index.html');
-});
+    restRoutes.configureForRouter(router);
+    pageRoutes.configureForRouter(router);
 
-module.exports = router;
+    /* Temporary catch-all-else redirecting back to home page */
+    router.get('/*', (req, res) => res.redirect('/index.html'));
+
+    app.use('/', router);
+};
+
+module.exports = {
+    configureForApp
+};

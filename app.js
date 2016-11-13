@@ -1,13 +1,13 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mustacheExpress = require('mustache-express');
-var routes = require('./routes/index');
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const mustacheExpress = require('mustache-express');
+const routes = require('./routes/index');
 
-var app = express();
+const app = express();
 
 // Hack; delete when ready to use express correctly
 app.use(express.static('./'));
@@ -26,12 +26,12 @@ app.use(logger('dev'));
 
 // Configure parsing
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
 // Configure static files
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+routes.configureForApp(app);
 
 module.exports = app;

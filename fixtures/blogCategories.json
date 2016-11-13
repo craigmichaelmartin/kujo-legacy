@@ -1,0 +1,16 @@
+{
+    "categories": [
+        { "name": "Most Recent" },
+        { "name": "Most Shared" },
+        { "name": "Minute to Fix It" },
+        { "name": "Gardening" },
+        { "name": "Yard Care Tips & Tricks" },
+        { "name": "Build-it-Yourself" },
+        { "name": "Do-It-Yourself" },
+        { "name": "Family Fun" },
+        { "name": "Decorating" },
+        { "name": "Hosting & Recipes" },
+        { "name": "Product Reviews" },
+        { "name": "Mythbusters" }
+    ]
+}
